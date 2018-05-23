@@ -15,20 +15,5 @@ public class IconsOnlyActivity extends Activity {
         setContentView(R.layout.activity_icons_only);
 
         messageView = (TextView) findViewById(R.id.messageView);
-
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
-        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
-            @Override
-            public void onTabSelected(@IdRes int tabId) {
-                messageView.setText(TabMessage.get(tabId, false));
-            }
-        });
-
-        bottomBar.setOnTabReselectListener(new OnTabReselectListener() {
-            @Override
-            public void onTabReSelected(@IdRes int tabId) {
-                Toast.makeText(getApplicationContext(), TabMessage.get(tabId, true), Toast.LENGTH_LONG).show();
-            }
-        });
     }
 }
