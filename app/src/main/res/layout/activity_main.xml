@@ -6,27 +6,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.noemphearak.applibrary.MainActivity">
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="HardcodedText">
 
         <TextView
-            android:id="@+id/messageView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/bottomBar"
-            android:gravity="center"
-            android:text="Hi mom!" />
+            android:layout_height="wrap_content"
+            android:text="Check out these samples and their sources for the most basic use cases."
+            android:layout_marginBottom="16dp" />
 
-        <com.roughike.bottombar.BottomBar
-            android:id="@+id/bottomBar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            app:bb_tabXmlResource="@xml/bottombar_tabs_five"
-            app:bb_behavior="iconsOnly" />
+        <Button
+            android:id="@+id/simple_three_tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simple example with three tabs" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/icons_only"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tabs with icons only" />
 
+        <Button
+            android:id="@+id/five_tabs_custom_colors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Using custom colors and fonts" />
+
+        <Button
+            android:id="@+id/five_tabs_changing_colors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Five tabs with changing colors" />
+
+        <Button
+            android:id="@+id/three_tabs_quick_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Three tabs with Quick Return" />
+
+        <Button
+            android:id="@+id/badges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Using Badges" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
